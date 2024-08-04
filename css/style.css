@@ -1,3 +1,42 @@
+/* Style reset */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+address {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* End style reset */
+
 :root {
   --primary-color: #4d5ae5;
   --primary-color-dark: #404bbf;
@@ -21,6 +60,16 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   background-color: var(--color-white);
+}
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .logo,
 .logo:visited {
@@ -48,8 +97,21 @@ body {
   color: var(--primary-color-dark);
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9fc;
+}
+.header-nav {
+  display: flex;
+  column-gap: 76px;
+}
+
 .header-list {
-  list-style-type: none;
+  display: flex;
+  column-gap: 40px;
 }
 
 .header-link,
@@ -68,7 +130,8 @@ body {
 }
 
 .header-address-list {
-  list-style-type: none;
+  display: flex;
+  column-gap: 40px;
 }
 .header-address-link,
 .header-address-link:visited {
@@ -85,15 +148,26 @@ body {
 
 .hero-section {
   background-color: var(--color-dark);
+}
+
+.hero-container {
+  padding: 68px 0;
+}
+.hero-box {
+  max-width: 496px;
+  margin: 0 auto;
   text-align: center;
 }
+
 .hero-title {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
   color: var(--color-white);
   letter-spacing: 0.02em;
+  margin-bottom: 48px;
 }
+
 .primary-button {
   border: none;
   opacity: 0px;
@@ -103,6 +177,8 @@ body {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  padding: 16px 32px 16px 32px;
+  border-radius: 4px;
 }
 
 .primary-button:hover,
@@ -111,14 +187,20 @@ body {
   background-color: var(--primary-color-dark);
 }
 
-.services-section {
-  text-align: center;
-}
 .services-section-title {
   letter-spacing: 0.02em;
+  margin-bottom: 48px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  color: var(--color-dark);
+  text-transform: capitalize;
+  text-align: center;
 }
+
 .services-list {
-  list-style-type: none;
+  display: flex;
+  column-gap: 24px;
 }
 
 .services-item-title {
@@ -127,11 +209,11 @@ body {
   line-height: 1.2;
   color: var(--color-dark);
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .team-section {
   background-color: var(--color-light);
-  text-align: center;
   letter-spacing: 0.02em;
 }
 .team-section-title {
@@ -141,14 +223,20 @@ body {
   color: var(--color-dark);
   text-transform: capitalize;
   letter-spacing: 0.02em;
+  margin-bottom: 72px;
+  text-align: center;
 }
 
 .team-list {
-  list-style-type: none;
+  display: flex;
+  column-gap: 24px;
 }
 
 .team-item {
   background-color: var(--color-white);
+  padding-bottom: 32px;
+  border-radius: 0 0 4px 4px;
+  text-align: center;
 }
 
 .team-item-title {
@@ -157,11 +245,10 @@ body {
   color: var(--color-dark);
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-top: 32px;
+  margin-bottom: 8px;
 }
 
-.portfolio-section {
-  text-align: center;
-}
 .portfolio-section-title {
   font-size: 36px;
   font-weight: 700;
@@ -169,15 +256,24 @@ body {
   color: var(--color-dark);
   text-transform: capitalize;
   letter-spacing: 0.02em;
+  margin-bottom: 72px;
+  text-align: center;
 }
 
 .portfolio-list {
-  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+.portfolio-box-info {
+  border: 1px solid var(--color-accent);
+  border-top: none;
+  padding: 32px 16px;
 }
 
 .portfolio-item {
   background-color: var(--color-white);
-  border: 1px solid var(--color-accent);
 }
 
 .portfolio-item-title {
@@ -186,10 +282,18 @@ body {
   color: var(--color-dark);
   letter-spacing: 0.02em;
   line-height: 1.2;
+  margin-bottom: 8px;
 }
 
 .footer {
   background-color: var(--color-dark);
+}
+.footer-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.footer-box {
+  max-width: 264px;
 }
 
 .footer-logo.logo .logo-end-text,
@@ -204,4 +308,5 @@ body {
 
 .footer-desc {
   color: var(--color-light);
+  margin-top: 16px;
 }
