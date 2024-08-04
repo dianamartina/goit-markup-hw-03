@@ -113,6 +113,9 @@ body {
 
 .header-list {
   display: flex;
+  gap: 40px;
+}
+.header-item {
   padding: 24px 0;
 }
 
@@ -121,6 +124,7 @@ body {
   font-weight: 500;
   color: var(--color-dark);
   text-decoration: none;
+  padding: 24px 0;
 }
 .header-link:hover,
 .header-link:active,
